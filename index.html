@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESIGNEDBYHUFSA</title>
+  <link rel="stylesheet" href="mainpagecss/intro.css">
+  <link rel="stylesheet" href="mainpagecss/navhero.css">
+  <link rel="stylesheet" href="mainpagecss/logos.css">
+  <link rel="stylesheet" href="mainpagecss/hero.css">
+  <link rel="stylesheet" href="mainpagecss/fourcontainers.css">
+  <link rel="stylesheet" href="mainpagecss/featuredproject.css">
+  <link rel="stylesheet" href="mainpagecss/steps.css">
+  <link rel="stylesheet" href="mainpagecss/services.css">
+  <link rel="stylesheet" href="mainpagecss/portfolio.css">
+  <link rel="stylesheet" href="mainpagecss/contact.css">
+  <link rel="stylesheet" href="mainpagecss/reviews.css">
+  <link rel="stylesheet" href="mainpagecss/newsletter.css">
+  <link rel="stylesheet" href="mainpagecss/contact.css">
+  <link rel="stylesheet" href="mainpagecss/footer.css">
+  <link rel="stylesheet" href="mainpagecss/faqa.css">
+  <link rel="stylesheet" href="mainpagecss/introscreen.css">
+
+  <script src="script.js"></script>
+  
+  <script src="faqs.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+
+
+</head>
+<body>
+  <!-- <div class="intro-screen" id="intro">
+    <p>You need a brand right now</p>
+    <p>but don't worry I am here for you!</p>
+  </div> -->
+  <!-- <div class="intro-wrapper" id="introWrapper">
+    <div class="intro-side">
+      <h1 class="intro-label">Contents.</h1>
+    </div>
+    <div class="intro-content">
+      <div class="intro-grid">
+        <div class="intro-item"><span>04.</span> <strong>Protaras.</strong><em>—2011</em></div>
+        <div class="intro-item"><span>12.</span> <strong>New York.</strong><em>—2012</em></div>
+        <div class="intro-item"><span>20.</span> <strong>Orlando.</strong><em>—2013</em></div>
+        <div class="intro-item"><span>28.</span> <strong>Marmaris.</strong><em>—2014</em></div>
+        <div class="intro-item"><span>36.</span> <strong>California.</strong><em>—2015</em></div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="intro-wrapper" id="introWrapper">
+    <div class="intro-side">
+      <h1 class="intro-label">Welcome.</h1>
+    </div>
+    <div class="intro-content">
+      <div class="intro-grid">
+        <div class="intro-item"><span>01.</span> <strong>About Me</strong> <em>— Designer & Dev</em></div>
+        <div class="intro-item"><span>02.</span> <strong>Skills</strong> <em>— UI/UX, Web Development, Graphic-Design</em></div>
+        <div class="intro-item"><span>03.</span> <strong>Projects</strong> <em>— Featured Work</em></div>
+        <div class="intro-item"><span>04.</span> <strong>Services</strong> <em>— UI/UX, Web Development, Graphic-Design</em></div>
+        <div class="intro-item"><span>05.</span> <strong>Contact</strong> <em>— Let's Talk</em></div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <script>document.addEventListener('mousemove', function () {
+    const intro = document.getElementById('introWrapper');
+    if (intro) {
+      intro.classList.add('hidden');
+    }
+  }, { once: true }); // Only triggers once
+  </script>
+   -->
+   <script>
+    window.addEventListener('load', function () {
+      const intro = document.getElementById('introWrapper');
+      if (intro) {
+        setTimeout(function () {
+          intro.classList.add('hidden');
+        }, 300); // Hides after 1 second
+      }
+    });
+  </script>
+  
+  <nav>
+    <!-- Logo on the Left -->
+    <div class="nav-logo">
+      <a href="../index.html">
+      <img src="public/Asset 2.svg" alt="Logo" width="100" />
+      </a>
+    </div>
+  
+  
+      
+        <!-- Navbar Content (Right Side) -->
+        <div class="nav-links">
+            <!-- Regular Links -->
+            <div class="nav-main-links">
+                <a href="aboutme/aboutme.html" class="nav-link-main">About Me</a>
+                <!-- <a href="#services" class="nav-link-main">Services</a> -->
+            </div>
+            <div class="dropdown">
+              <a href="#service" class="dropdown-toggle">
+                  Services
+                  <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                      <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                  </svg>
+              </a>
+              <div class="dropdown-content">
+                  <a href="gdservice/gdservice.html" class="dropdown-item">Graphic Design</a>
+                  <a href="uiservice/ui.html" class="dropdown-item">UI/UX Design</a>
+                  <a href="webservice/webservice.html" class="dropdown-item">Web Development</a>
+              </div>
+          </div>
+        
+            <!-- Dropdown Section -->
+            <div class="dropdown">
+                <a href="#gallery" class="dropdown-toggle">
+                    Gallery
+                    <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </a>
+                <div class="dropdown-content">
+                    <a href="gdgallery/gdgallery.html" class="dropdown-item">Graphic Design</a>
+                    <a href="uiuxgallery/uiuxgallery.html" class="dropdown-item">UI/UX Design</a>
+                    <a href="webgallery/webgallery.html" class="dropdown-item">Web Development</a>
+                </div>
+            </div>
+            <!-- Contact Button -->
+            <div class="nav-right">
+              <!-- <button class="contact-btn">Contact Me</button> -->
+              <button class="contact-btn" onclick="window.location.href='contactus/contactus.html'">Contact Me</button>
+
+            </div>
+        </div>
+        
+        </div>
+       <!-- Mobile Menu Icon -->
+    <div class="hamburger">☰</div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="nav-main-links">
+            <a href="aboutme/aboutme.html" class="nav-link-main">About Me</a>
+            <!-- <a href="#services" class="nav-link-main">Services</a> -->
+        </div>
+        <div class="dropdown">
+          <a href="#services" class="dropdown-toggle">
+              Services
+              <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+              </svg>
+          </a>
+          <div class="dropdown-content">
+              <a href="gdservice/gdservice.html" class="dropdown-item">Graphic Design</a>
+              <a href="uiservice/ui.html" class="dropdown-item">UI/UX Design</a>
+              <a href="webservice/webservice.html" class="dropdown-item">Web Development</a>
+          </div>
+      </div>
+
+
+        <div class="dropdown">
+            <a href="#gallery" class="dropdown-toggle">
+                Gallery
+                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                </svg>
+            </a>
+            <div class="dropdown-content">
+                <a href="gdgallery/gdgallery.html" class="dropdown-item">Graphic Design</a>
+                <a href="uiuxgallery/uiuxgallery.html" class="dropdown-item">UI/UX Design</a>
+                <a href="webgallery/webgallery.html" class="dropdown-item">Web Development</a>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <!-- <button class="contact-btn">Contact Me</button> -->
+            <button class="contact-btn" onclick="window.location.href='contactus/contactus.html'">Contact Me</button>
+        </div>
+    </div>
+      
+      </nav>
+      
+      <section class="hero">
+        <!-- Left Content -->
+        <div class="hero-left">
+          <h1 class="hero-title">Where creativity</h1>
+          <h1 class="heros-title">meets precision</h1>
+          <p class="hero-description">Hi, I’m Hufsa Noor — a passionate Graphic Designer, UI/UX Specialist, and Web Developer.
+            I craft visually stunning, user-focused solutions that not only elevate your brand but also deliver seamless digital experiences. Whether you need bold branding, intuitive interfaces, or responsive websites, I provide tailored, all-in-one solutions that bring your vision to life — beautifully and effectively.</p>
+            <!-- <button class="contact-btn" onclick="window.location.href='contactus/contactus.html'">Contact Me</button> -->
+            <button class="cta-button" onclick="window.location.href='contactus/contactus.html'">Hire Me</button>
+        </div>
+        
+
+<!-- 
+        <div class="video-container">
+            <video class="main-video" autoplay muted loop>
+              <source src="/public/Scene.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+         -->
+         
+         <div class="video-container">
+          <!-- <a href="https://koreskoleibronshoj.dk/" target="_blank" rel="noopener noreferrer">
+            <video class="main-video" autoplay muted loop>
+              <source src="/public/Scene.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a> -->
+          <a href="https://koreskoleibronshoj.dk/" target="_blank" rel="noopener noreferrer" title="Visit Koreskole i Brønshøj">
+            <video class="main-video" autoplay muted loop>
+              <source src="/public/Scene.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          
+        </div>
+           
+          </div>
+
+ 
+      </section>
+
+
+      
+      
+
+      <section class="process-section">
+        <div class="container">
+          <h2 class="process-title">Proven steps for Success</h2>
+          <p class="process-description">Streamlined process for maximum efficiency and results</p>
+          
+          <div class="steps-wrapper">
+            <!-- Step 1 -->
+            <div class="step-card step-1">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>In-Depth Discovery & Strategy</h3>
+                <p>The process begins with a deep understanding of the brand’s vision, objectives, and target audience. Through detailed discussions and research, a personalized strategy is crafted that aligns with the goals, ensuring a successful foundation for both design and development.</p>
+              </div>
+            </div>
+      
+            <!-- Step 2 -->
+            <div class="step-card step-2">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Creative Design & Prototyping / Development & Integration</h3>
+                <p>Whether it's crafting an engaging user interface or developing robust functionality, the vision is brought to life. The design process focuses on user experience and aesthetics, while the development phase ensures clean, scalable code and seamless integration across platforms.</p>
+              </div>
+            </div>
+      
+            <!-- Step 3 -->
+            <div class="step-card step-3">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Final Launch & Post-Launch Support</h3>
+                <p>After finalizing the project, it is launched and tested to ensure flawless functionality across all devices and platforms. Post-launch, continuous support and optimization are provided, ensuring the project stays current and adapts to any future business needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- featured-projects -->
+<section class="projects-section">
+    <div class="projects-container">
+      <!-- Left Content -->
+      <div class="projects-info">
+        <h2 class="projects-title">Featured Projects</h2>
+        <p class="projects-description">A collection of innovative branding and UI/UX designs that deliver impactful, user-centric experiences. Each project blends creativity with functionality to elevate brands and engage audiences effectively.</p>
+        
+      </div>
+  
+      <!-- Right Grid -->
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-item">
+          <img src="public/topquote.jpg" alt="TOPQuote" class="project-image">
+          <div class="project-overlay">
+            <h3>TOPQuote</h3>
+            <p>Designed a clear, engaging website for TopQuote</p>
+            <a href="https://dribbble.com/shots/25922910-TOPQuote" class="project-btn">View Project</a>
+
+            <!-- <button class="project-btn">View Project</button> -->
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-item">
+          <img src="public/trade channel scandinavia logos-04.jpg" alt="Trade Channel Scandinavia Logo" class="project-image">
+          <div class="project-overlay">
+            <h3>Trade Channel Scandinavia Logo</h3>
+            <p>Designed a bold and dynamic poster for Scanditach, capturing the brand’s energy and modern identity through striking visuals and balanced layout.</p>
+            <!-- <button class="project-btn">View Project</button> -->
+            <a href="https://www.behance.net/gallery/223980427/Poster-Design" class="project-btn">View Project</a>
+
+          </div>
+        </div>
+  
+        <!-- Project 3 -->
+        <div class="project-item">
+          <img src="public/assergroupofcompanies-01.jpg" alt="Aseer Group of Companies" class="project-image">
+          <div class="project-overlay">
+            <h3>Aseer Group of Companies</h3>
+            <p>Developed a professional website for Aseer Group of Companies to showcase their diverse business ventures and services with a clean, corporate design.</p>
+            <!-- <button class="project-btn">View Project</button> -->
+            <a href="https://aseertransportservice.com/home.html" class="project-btn">View Project</a>
+          </div>
+        </div>
+  
+        <!-- Project 4 -->
+        <div class="project-item">
+          <img src="public/Desktop - 13.jpg" alt="EdTech Platform" class="project-image">
+          <div class="project-overlay">
+            <h3>Køreskole i Brønshøj</h3>
+            <p>A refined driving interface built for ease, focus, and flow.</p>
+            <!-- <button class="project-btn">View Project</button> -->
+            <a href="https://koreskoleibronshoj.dk/" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+
+
+
+  
+
+
+  <div class="profile-container">
+    <!-- Left Column -->
+    <div class="left-column">
+      <div class="profile-image__wrapper">
+        <img src="/public/uuu.jpg" alt="Professional Portrait" class="profile-image">
+      </div>
+      
+      <section class="achievements-grid">
+        <article class="achievement-card">
+          <h3 class="achievement-value">4+</h3>
+          <p class="achievement-label">Years Mastery</p>
+        </article>
+        <article class="achievement-card">
+          <h3 class="achievement-value">10+</h3>
+          <p class="achievement-label">Projects Delivered</p>
+        </article>
+        <article class="achievement-card">
+          <h3 class="achievement-value">98%</h3>
+          <p class="achievement-label">Client Success Rate</p>
+        </article>
+        <article class="achievement-card">
+          <h3 class="achievement-value">2</h3>
+          <p class="achievement-label">Client reviews</p>
+        </article>
+      </section>
+    </div>
+  
+    <!-- Right Column -->
+    <div id="about" class="profile-content">
+      <header class="profile-header">
+        <p class="professional-tag">Creative Visionary</p>
+        <h1 class="profile-title">Crafting Digital Excellence</h1>
+        <p class="profile-description">With a decade of expertise in digital innovation, I architect meaningful brand experiences that resonate. Merging aesthetic precision with functional design to deliver transformative solutions.</p>
+        <button class="cta-button" onclick="window.location.href='contactus/contactus.html'">Start a Project</button>
+      </header>
+  
+      <section class="expertise">
+        <div class="expertise__item">
+          <div class="expertise__meta">
+            <span class="expertise__label">Graphic Design</span>
+            <span class="expertise__value">95%</span>
+          </div>
+          <div class="expertise__progress">
+            <div class="expertise__progress-bar" style="width: 95%"></div>
+          </div>
+        </div>
+  
+        <div class="expertise__item">
+          <div class="expertise__meta">
+            <span class="expertise__label">User Experience</span>
+            <span class="expertise__value">90%</span>
+          </div>
+          <div class="expertise__progress">
+            <div class="expertise__progress-bar" style="width: 90%"></div>
+          </div>
+        </div>
+  
+        <div class="expertise__item">
+          <div class="expertise__meta">
+            <span class="expertise__label">UI Design</span>
+            <span class="expertise__value">95%</span>
+          </div>
+          <div class="expertise__progress">
+            <div class="expertise__progress-bar" style="width: 88%"></div>
+          </div>
+        </div>
+        <div class="expertise__item">
+          <div class="expertise__meta">
+            <span class="expertise__label">Web Development</span>
+            <span class="expertise__value">88%</span>
+          </div>
+          <div class="expertise__progress">
+            <div class="expertise__progress-bar" style="width: 88%"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+
+
+
+  <section class="services">
+    <h2 class="section-title">Services</h2>
+    
+    <div class="services-grid">
+      <!-- Graphic Design Card -->
+      <article class="service-card">
+        <header class="service-header">
+          <h3 class="service-title">Graphic Design</h3>
+        </header>
+        <ul class="service-features">
+          <li>Brand Identity Design</li>
+          <li>Logo & Visual Design Systems</li>
+          <li>Social Media Design</li>
+          <li>Marketing Collateral</li>
+          <li>Packaging & Label Design</li>
+          <li>Typography & Layout Expertise</li>
+          <li>Adobe Creative Suite</li>
+        </ul>
+        <footer class="service-cta">
+          <button class="service-button">Start Design Project</button>
+        </footer>
+      </article>
+  
+      <!-- UI/UX Design Card -->
+      <article class="service-card">
+        <header class="service-header">
+          <h3 class="service-title">UI/UX Design</h3>
+        </header>
+        <ul class="service-features">
+          <li>Web & Mobile Interface Design</li>
+          <li>User Experience Research</li>
+          <li>Prototyping & Interactive Design</li>
+          <li>Design Systems & Style Guides</li>
+          <li>Mobile-First Responsive Design</li>
+          <li>Figma, Adobe XD</li>
+          <li>Usability Testing</li>
+        </ul>
+        <footer class="service-cta">
+          <button class="service-button">Discuss UX Strategy</button>
+        </footer>
+      </article>
+  
+      <!-- Web Design & Development Card -->
+      <article class="service-card">
+        <header class="service-header">
+          <h3 class="service-title">Web Design & Development</h3>
+        </header>
+        <ul class="service-features">
+          <li>Front-End Development</li>
+          <li>Responsive Web Design</li>
+          <li>WordPress</li>
+          <li>Custom Landing Pages</li>
+          <li>SEO-Friendly Development</li>
+          <li>UI/UX Integration</li>
+          <li>Performance Optimization</li>
+        </ul>
+        <footer class="service-cta">
+          <button class="service-button">Launch Your Website</button>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="faq-title">Design Services FAQs</h2>
+      
+      <div class="faq-categories">
+        <div class="category active" data-category="graphic-design">
+          <h3>Graphic Design</h3>
+        </div>
+        <div class="category" data-category="ui-ux">
+          <h3>UI/UX Design</h3>
+        </div>
+      </div>
+  
+      <div class="faq-accordion">
+        <!-- Graphic Design FAQs -->
+        <div class="faq-item active" data-category="graphic-design">
+          <div class="faq-question">
+            <h4>What's included in your brand identity package?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>A comprehensive brand identity package typically includes logo design, color palette development, typography systems, brand guidelines documentation, and basic stationery design such as business cards and letterheads. Optional add-ons may include social media kits and packaging design.</p>
+          </div>
+        </div>
+  
+        <div class="faq-item active" data-category="graphic-design">
+          <div class="faq-question">
+            <h4>How many revisions do you allow?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+Three rounds of revisions are included in standard packages. For complex projects, flexible revision options are available. All revisions are tracked and documented to maintain design consistency throughout the process.
+</p>
+          </div>
+        </div>
+  
+        <!-- UI/UX Design FAQs -->
+        <div class="faq-item" data-category="ui-ux">
+          <div class="faq-question">
+            <h4>What's your UX design process?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>The user-centered process involves discovery and research, creating user personas and journeys, and developing the information architecture. It continues with wireframing, prototyping, usability testing, and ends with a final design handoff including developer documentation.</p>
+          </div>
+        </div>
+  
+        <div class="faq-item" data-category="ui-ux">
+          <div class="faq-question">
+            <h4>Do you provide responsive design?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>All UI designs include responsive layouts for desktop, tablet, and mobile views. Detailed breakpoint specifications and adaptive component behaviors are provided to ensure perfect display across devices.</p>
+          </div>
+        </div>
+  
+        <!-- Add more questions following the same structure -->
+      </div>
+    </div>
+  </section>
+
+
+  <section class="logo-grid-section">
+    <h2>Trusted By
+    </h2>
+    <div class="logo-grid">
+      <!-- Wrap each logo in a grid item -->
+      <div class="logo-item">
+        <div class="logo-container">
+          <img src="/public/Asset 2.svg" alt="Client Logo" class="grayscale-logo">
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-container">
+          <img src="/public/Asset 2.svg" alt="Client Logo" class="grayscale-logo">
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-container">
+          <img src="/public/Aseergroupofcompanies.svg" alt="Client Logo" class="grayscale-logo">
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-container">
+          <img src="/public/scandictech.svg" alt="Client Logo" class="grayscale-logo">
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-container">
+          <img src="/public/Asset 2.svg" alt="Client Logo" class="grayscale-logo">
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-container">
+          <img src="/public/Asset 2.svg" alt="Client Logo" class="grayscale-logo">
+        </div>
+      </div>
+      <!-- Repeat for other logos -->
+    </div>
+  </section>
+  
+  <!-- <section class="newsletter-section">
+    <p class="small-text">Sign Up Newsletter & Promotions!</p>
+    <h2>Subscribe To <br />Get Special News</h2>
+
+    <form id="subscribe-form" class="subscribe-form">
+      <input type="email" placeholder="Email Address" required />
+      <button type="submit">Get Started</button>
+    </form>
+  </section> -->
+  <section class="newsletter-section">
+    <p class="small-text">Sign Up Newsletter & Promotions!</p>
+    <h2>Subscribe To <br />Get Special News</h2>
+  
+    <form id="subscribe-form" class="subscribe-form">
+      <input type="email" name="email" placeholder="Email Address" required />
+      <button type="submit">Get Started</button>
+    </form>
+  </section>
+  
+  <!-- <script>
+    document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const email = e.target.email.value;
+  
+      fetch("", {
+        method: "POST",
+        body: new URLSearchParams("email=" + email),
+      })
+        .then((res) => res.text())
+        .then((data) => {
+          alert("Thanks for subscribing!");
+          e.target.reset();
+        })
+        .catch((err) => {
+          console.error(err);
+          alert("There was an error. Please try again later.");
+        });
+    });
+  </script> -->
+  <script>
+    document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const email = e.target.email.value;
+  
+      fetch("https://script.google.com/macros/s/AKfycbzP8BZ-24jcBL7AVaNLcLWkrZ0efJk0VpM3juPV25gpyz0ioK7sUkvoOb1i7m04SxEN/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ email }),
+      })
+        .then((res) => res.text())
+        .then((data) => {
+          alert("Thanks for subscribing!");
+          e.target.reset();
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+          alert("There was an error. Please try again later.");
+        });
+    });
+  </script>
+  
+  <section class="contact-container">
+    <div class="contact-details">
+      <h2 class="contact-heading">CONTACT</h2>
+      <p class="contact-description">
+        Interested in working together or have a project in mind? Fill out the form below and I’ll get back to you shortly
+      </p>
+  
+      <div class="info-section">
+        <h4 class="info-title">Address</h4>
+        <p class="info-text">Lahore, Pakistan</p>
+  
+        <h4 class="info-title">Phone</h4>
+        <p class="info-text">PH: +92-304-5907975</p>
+  
+        <h4 class="info-title">Email</h4>
+        <p class="info-text">hufsanoor7975@gmail.com</p>
+        <div class="social-links">
+          <h4 class="info-title">Social-links</h4>
+         <!-- <a href="https://www.linkedin.com/in/hufsa-noor/"><i class="fab fa-linkedin-in"></i></a>
+         <a href="https://www.behance.net/hufsan00r"><i class="fab fa-behance"></i></a>
+         <a href="https://dribbble.com/HufsaNoor"><i class="fab fa-dribbble"></i></a>
+         <a href="https://github.com/HufsaNoor"><i class="fab fa-github"></i></a> -->
+         <a href="https://www.linkedin.com/in/hufsa-noor/" title="LinkedIn Profile" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        <a href="https://www.behance.net/hufsan00r" title="Behance Portfolio" aria-label="Behance Portfolio" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-behance"></i>
+        </a>
+        
+        <a href="https://dribbble.com/HufsaNoor" title="Dribbble Portfolio" aria-label="Dribbble Portfolio" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-dribbble"></i>
+        </a>
+        
+        <a href="https://github.com/HufsaNoor" title="GitHub Profile" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+        
+
+
+         <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+         <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+         <!-- <a href="https://www.instagram.com/hufsan00r/"><i class="fab fa-instagram"></i></a> -->
+         <a href="https://www.instagram.com/hufsan00r/" 
+         title="Instagram Profile" 
+         aria-label="Instagram Profile" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+         <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+       </div>
+      </div>
+  
+     
+    </div>
+  
+    <div class="contact-form-box">
+      <h3 class="form-title">GET IN TOUCH</h3>
+      <form id="contact-form">
+        <!-- <input type="text" placeholder="Name" required class="form-input" />
+        <input type="email" placeholder="Email" required class="form-input" />
+        <input type="tel" placeholder="Phone number" required class="form-input" />
+        <textarea placeholder="Message" rows="4" required class="form-textarea"></textarea> -->
+        <input type="text" name="name" placeholder="Name" required class="form-input" />
+    <input type="email" name="email" placeholder="Email" required class="form-input" />
+    <input type="tel" name="phone" placeholder="Phone number" required class="form-input" />
+    <textarea name="message" placeholder="Message" rows="4" required class="form-textarea"></textarea>
+        <button type="submit" class="form-button">Send Message</button>
+      </form>
+    </div>
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+    
+        const form = e.target;
+        const formData = new URLSearchParams(new FormData(form));
+    
+        fetch("https://script.google.com/macros/s/AKfycbwOtiDldF0Yv1dKoI-Z77vQsYJSYmJynGWCGL3cDyxfiWHbUHKHZ7xCPuN6ujYhD1O1aQ/exec", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formData,
+        })
+          .then((res) => res.text())
+          .then((data) => {
+            alert("Your message has been sent!");
+            form.reset();
+          })
+          .catch((err) => {
+            console.error("Error:", err);
+            alert("Something went wrong. Please try again.");
+          });
+      });
+    </script>
+  </section>
+  
+  <footer class="site-footer">
+    <p class="footer-text">
+      © 2025 All rights reserved. <span class="designer">DESIGNEDBYHUFSA</span>
+    </p>
+  </footer>
+  
+
+</body>
+</html>
+
+
+

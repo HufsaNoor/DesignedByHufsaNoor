@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGNEDBYHUFSA</title>
+    <link rel="stylesheet" href="../mainpagecss/navhero.css">
+    <link rel="stylesheet" href="gdservice.css">
+    <link rel="stylesheet" href="../mainpagecss/footer.css">
+    <link rel="stylesheet" href="../mainpagecss/contact.css">
+    <link rel="stylesheet" href="../mainpagecss/newsletter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!--     
+    <script src="gdservice.html"></script> -->
+</head>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <script>
+      // Fetch the navbar HTML and inject it into the page
+      fetch("../nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+          // Call the function to setup event listeners for the hamburger menu
+          setupNavbar();
+        });
+
+      // Function to setup event listeners for the hamburger and dropdowns
+      function setupNavbar() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+          });
+        }
+
+        dropdowns.forEach(dropdown => {
+          const toggle = dropdown.querySelector('.dropdown-toggle');
+          if (toggle) {
+            toggle.addEventListener('click', function (e) {
+              e.preventDefault();
+              dropdown.classList.toggle('active');
+            });
+          }
+        });
+      }
+    </script>
+
+
+<section class="contact-container">
+    <div class="contact-details">
+      <h2 class="contact-heading">CONTACT</h2>
+      <p class="contact-description">
+        Interested in working together or have a project in mind? Fill out the form below and I’ll get back to you shortly
+      </p>
+  
+      <div class="info-section">
+        <h4 class="info-title">Address</h4>
+        <p class="info-text">Lahore, Pakistan</p>
+  
+        <h4 class="info-title">Phone</h4>
+        <p class="info-text">PH: +92-304-5907975</p>
+  
+        <h4 class="info-title">Email</h4>
+        <p class="info-text">hufsanoor7975@gmail.com</p>
+        <div class="social-links">
+          <h4 class="info-title">Social-links</h4>
+         <a href="https://www.linkedin.com/in/hufsa-noor/"><i class="fab fa-linkedin-in"></i></a>
+         <a href="https://www.behance.net/hufsan00r"><i class="fab fa-behance"></i></a>
+         <a href="https://dribbble.com/HufsaNoor"><i class="fab fa-dribbble"></i></a>
+         <a href="https://github.com/HufsaNoor"><i class="fab fa-github"></i></a>
+
+
+         <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+         <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+         <a href="https://www.instagram.com/hufsan00r/"><i class="fab fa-instagram"></i></a>
+         <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+       </div>
+      </div>
+  
+     
+    </div>
+  
+    <div class="contact-form-box">
+      <h3 class="form-title">GET IN TOUCH</h3>
+      <form id="contact-form">
+        <!-- <input type="text" placeholder="Name" required class="form-input" />
+        <input type="email" placeholder="Email" required class="form-input" />
+        <input type="tel" placeholder="Phone number" required class="form-input" />
+        <textarea placeholder="Message" rows="4" required class="form-textarea"></textarea> -->
+        <input type="text" name="name" placeholder="Name" required class="form-input" />
+    <input type="email" name="email" placeholder="Email" required class="form-input" />
+    <input type="tel" name="phone" placeholder="Phone number" required class="form-input" />
+    <textarea name="message" placeholder="Message" rows="4" required class="form-textarea"></textarea>
+        <button type="submit" class="form-button" >Send Message</button>
+      </form>
+    </div>
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+    
+        const form = e.target;
+        const formData = new URLSearchParams(new FormData(form));
+    
+        fetch("https://script.google.com/macros/s/AKfycbwOtiDldF0Yv1dKoI-Z77vQsYJSYmJynGWCGL3cDyxfiWHbUHKHZ7xCPuN6ujYhD1O1aQ/exec", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formData,
+        })
+          .then((res) => res.text())
+          .then((data) => {
+            alert("Your message has been sent!");
+            form.reset();
+          })
+          .catch((err) => {
+            console.error("Error:", err);
+            alert("Something went wrong. Please try again.");
+          });
+      });
+    </script>
+  </section>
+  </section>
+
+
+
+  <section class="newsletter-section">
+    <p class="small-text">Sign Up Newsletter & Promotions!</p>
+    <h2>Subscribe To <br />Get Special News</h2>
+
+    <form id="subscribe-form" class="subscribe-form">
+      <input type="email" placeholder="Email Address" required />
+      <button type="submit" >Get Started</button>
+    </form>
+  </section>
+
+  
+  <footer class="site-footer">
+    <p class="footer-text">
+      © 2025 All rights reserved. <span class="designer">DESIGNEDBYHUFSA</span>
+    </p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* body {
+    margin: 2rem;
+   
+  } */
+  
+  .newsletter-section {
+    background-color: #514af6;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .newsletter-section::before,
+  .newsletter-section::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+  
+  .newsletter-section::before {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+  }
+  
+  .newsletter-section::after {
+    width: 500px;
+    height: 500px;
+    bottom: -100px;
+    right: -100px;
+  }
+  
+  .small-text {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscribe-form input[type="email"] {
+    padding: 20px;
+    font-size: 1rem;
+    border: none;
+    flex: 1;
+    outline: none;
+  }
+  
+  .subscribe-form button {
+    background-color: #ffb524;
+    border: none;
+    padding: 0 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #e49f1c;
+  }
+  
+
+  
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .newsletter-section {
+    padding: 60px 20px;
+  }
+
+  .newsletter-section::before,
+  .newsletter-section::after {
+    width: 300px;
+    height: 300px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .subscribe-form input[type="email"] {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .subscribe-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newsletter-section {
+    padding: 40px 20px;
+  }
+
+  .newsletter-section::before,
+  .newsletter-section::after {
+    width: 250px;
+    height: 250px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .small-text {
+    font-size: 0.9rem;
+  }
+
+  .subscribe-form input[type="email"] {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .subscribe-form button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

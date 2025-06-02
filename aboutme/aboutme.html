@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGNEDBYHUFSA</title>
+    <link rel="stylesheet" href="../mainpagecss/navhero.css">
+    <link rel="stylesheet" href="aboutme.css">
+    <link rel="stylesheet" href="../mainpagecss/footer.css">
+   
+</head>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <script>
+      // Fetch the navbar HTML and inject it into the page
+      fetch("../nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+          // Call the function to setup event listeners for the hamburger menu
+          setupNavbar();
+        });
+
+      // Function to setup event listeners for the hamburger and dropdowns
+      function setupNavbar() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+          });
+        }
+
+        dropdowns.forEach(dropdown => {
+          const toggle = dropdown.querySelector('.dropdown-toggle');
+          if (toggle) {
+            toggle.addEventListener('click', function (e) {
+              e.preventDefault();
+              dropdown.classList.toggle('active');
+            });
+          }
+        });
+      }
+    </script>
+  <!-- <section class="about-container">
+    <div class="about-content">
+      <h1 class="heading">About Me</h1>
+      <p class="tagline">Designer. Developer. Visionary.</p>
+      <p class="description">
+        Passionate about creating impactful user experiences, blending creativity with functionality.  
+        Specialized in UI/UX design, frontend development, and brand storytelling that leaves a mark.
+      </p>
+      <div class="info-grid">
+        <div class="info-item">
+          <h3>Expertise</h3>
+          <p>UI/UX Design, Web Development, Branding</p>
+        </div>
+        <div class="info-item">
+          <h3>Tools</h3>
+          <p>Figma, Adobe Suite, React, Next.js</p>
+        </div>
+        <div class="info-item">
+          <h3>Experience</h3>
+          <p>Freelancer + Agency Projects + Self-Initiated</p>
+        </div>
+        <div class="info-item">
+          <h3>Location</h3>
+          <p>Based near Lahore, Pakistan</p>
+        </div>
+      </div>
+      <a href="contact.html" class="cta-button">Let’s Collaborate</a>
+    </div>
+  </section> -->
+
+
+
+  <section class="about-container">
+    <div class="about-wrapper">
+      <div class="about-image">
+        <img src="../public/uuu.jpg" alt="Profile Picture" />
+      </div>
+      <div class="about-content">
+        <h1 class="heading">About Me</h1>
+        <p class="tagline">Designer. Developer. Visionary.</p>
+        <p class="description">
+          Passionate about creating impactful user experiences, blending creativity with functionality.  
+          Specialized in UI/UX design, frontend development, and brand storytelling that leaves a mark.
+        </p>
+        <div class="info-grid">
+          <div class="info-item">
+            <h3>Expertise</h3>
+            <p>UI/UX Design, Web Development, Graphic-Design</p>
+          </div>
+          <!-- <div class="info-item">
+            <h3>Tools</h3>
+            <p>Figma, Adobe Suite, React, Next.js</p>
+          </div> -->
+          <div class="info-item">
+            <h3>Experience</h3>
+            <p>Freelancer + Agency Projects + Self-Initiated</p>
+          </div>
+          <div class="info-item">
+            <h3>Location</h3>
+            <p>Based near Lahore, Pakistan</p>
+          </div>
+        </div>
+        <a href="../contactus/contactus.html" class="cta-button">Let’s Collaborate</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p class="footer-text">
+      © 2025 All rights reserved. <span class="designer">DESIGNEDBYHUFSA</span>
+    </p>
+  </footer>
+  
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESIGNEDBYHUFSA</title>
+
+  <link rel="stylesheet" href="mainpagecss/navhero.css">
+  <!-- <script src="script.js"></script> -->
+
+</head>
+<body>
+
+
+<nav>
+    <!-- Logo on the Left -->
+    <div class="nav-logo">
+      <a href="../index.html"> 
+      <img src="../public/Asset 2.svg" alt="Logo" width="100" />
+      </a>
+    </div>
+  
+  
+      
+        <!-- Navbar Content (Right Side) -->
+        <div class="nav-links">
+            <!-- Regular Links -->
+            <div class="nav-main-links">
+                <a href="../aboutme/aboutme.html" class="nav-link-main">About Me</a>
+                <!-- <a href="#services" class="nav-link-main">Services</a> -->
+            </div>
+            <div class="dropdown">
+              <a href="#services" class="dropdown-toggle">
+                  Services
+                  <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                      <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                  </svg>
+              </a>
+              <div class="dropdown-content">
+                  <a href="../gdservice/gdservice.html" class="dropdown-item">Graphic Design</a>
+                  <a href="../uiservice/ui.html" class="dropdown-item">UI/UX Design</a>
+                  <a href="../webservice/webservice.html" class="dropdown-item">Web Development</a>
+              </div>
+          </div>
+        
+            <!-- Dropdown Section -->
+            <div class="dropdown">
+                <a href="#gallery" class="dropdown-toggle">
+                    Gallery
+                    <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </a>
+                <div class="dropdown-content">
+                    <a href="../gdgallery/gdgallery.html" class="dropdown-item">Graphic Design</a>
+                    <a href="../uiuxgallery/uiuxgallery.html" class="dropdown-item">UI/UX Design</a>
+                    <a href="../webgallery/webgallery.html" class="dropdown-item">Web Development</a>
+                </div>
+            </div>
+            <!-- Contact Button -->
+            <div class="nav-right">
+              <!-- <button class="contact-btn">Contact Me</button> -->
+              <button class="contact-btn" onclick="window.location.href='../contactus/contactus.html'">Contact Me</button>
+            </div>
+        </div>
+        
+        </div>
+       <!-- Mobile Menu Icon -->
+    <div class="hamburger">☰</div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="nav-main-links">
+            <a href="../aboutme/aboutme.html" class="nav-link-main">About Me</a>
+            <!-- <a href="#services" class="nav-link-main">Services</a> -->
+        </div>
+        <div class="dropdown">
+          <a href="#service" class="dropdown-toggle">
+              Services
+              <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+              </svg>
+          </a>
+          <div class="dropdown-content">
+              <a href="../gdservice/gdservice.html" class="dropdown-item">Graphic Design</a>
+              <a href="../uiservice/ui.html" class="dropdown-item">UI/UX Design</a>
+              <a href="../webservice/webservice.html" class="dropdown-item">Web Development</a>
+          </div>
+      </div>
+
+        <div class="dropdown">
+            <a href="#gallery" class="dropdown-toggle">
+                Gallery
+                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                </svg>
+            </a>
+            <div class="dropdown-content">
+                <a href="../gdgallery/gdgallery.html" class="dropdown-item">Graphic Design</a>
+                <a href="../uiuxgallery/uiuxgallery.html" class="dropdown-item">UI/UX Design</a>
+                <a href="../webgallery/webgallery.html" class="dropdown-item">Web Development</a>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <!-- <button class="contact-btn">Contact Me</button> -->
+            <button class="contact-btn" onclick="window.location.href='../contactus/contactus.html'">Contact Me</button>
+        </div>
+    </div>
+      
+   
+      </nav>
+
+      
+  <script>
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   const hamburger = document.querySelector('.hamburger');
+    //   const mobileMenu = document.querySelector('.mobile-menu');
+    //   const dropdowns = document.querySelectorAll('.dropdown');
+
+    //   hamburger.addEventListener('click', function () {
+    //     mobileMenu.classList.toggle('active');
+    //   });
+
+    //   dropdowns.forEach(dropdown => {
+    //     const toggle = dropdown.querySelector('.dropdown-toggle');
+    //     toggle.addEventListener('click', function (e) {
+    //       e.preventDefault();
+    //       dropdown.classList.toggle('active');
+    //       console.log("Script is running");
+
+    //     });
+    //   });
+    // });
+    document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (!hamburger || !mobileMenu) {
+    console.warn("Hamburger or mobile menu not found");
+    return;
+  }
+
+  // Toggle menu
+  hamburger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    mobileMenu.classList.toggle('active');
+  });
+
+  // Prevent inside click from closing
+  // mobileMenu.addEventListener('click', function (e) {
+  //   e.stopPropagation();
+  // });
+
+  // Click outside closes it
+  document.addEventListener('click', function () {
+    mobileMenu.classList.remove('active');
+  });
+});
+  </script>
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  console.log(hamburger);  // Check if the hamburger exists
+  console.log(mobileMenu); // Check if the mobile menu exists
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function () {
+      mobileMenu.classList.toggle('active');
+    });
+  } else {
+    console.error("hamburger or mobileMenu not found!");
+  }
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+        console.log("Script is running");
+      });
+    } else {
+      console.error("dropdown-toggle not found inside a dropdown!");
+    }
+  });
+});
+
+  </script> -->
+</body>
+</html>

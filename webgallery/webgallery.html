@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGNEDBYHUFSA</title>
+    <link rel="stylesheet" href="../mainpagecss/navhero.css">
+    <link rel="stylesheet" href="webgallery.css">
+    <link rel="stylesheet" href="../mainpagecss/footer.css">
+   
+</head>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <script>
+      // Fetch the navbar HTML and inject it into the page
+      fetch("../nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+          // Call the function to setup event listeners for the hamburger menu
+          setupNavbar();
+        });
+
+      // Function to setup event listeners for the hamburger and dropdowns
+      function setupNavbar() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+          });
+        }
+
+        dropdowns.forEach(dropdown => {
+          const toggle = dropdown.querySelector('.dropdown-toggle');
+          if (toggle) {
+            toggle.addEventListener('click', function (e) {
+              e.preventDefault();
+              dropdown.classList.toggle('active');
+            });
+          }
+        });
+      }
+    </script>
+<section class="gallery-section">
+    <!-- <div>
+        <h>Graphic-Design</h>
+    </div> -->
+    <div class="design-header">
+        <h1 class="design-title">Website Development</h1>
+        <p class="design-description">A showcase of responsive, high-performance websites built with modern tech.
+          Each project reflects custom solutions, clean code, and seamless user flow.
+          
+          </p>
+    </div>
+    <div class="gallery-container" id="galleryContainer">
+      <!-- Cards will be inserted here dynamically -->
+    </div>
+    <button class="cta-button" id="viewMoreBtn">View More</button>
+  </section>
+  <footer class="site-footer">
+    <p class="footer-text">
+      © 2025 All rights reserved. <span class="designer">DESIGNEDBYHUFSA</span>
+    </p>
+  </footer>
+
+  <script src="webgallry.js"></script>
+</body>
+</html>

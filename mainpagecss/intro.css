@@ -1,0 +1,227 @@
+:root {
+  --primary-accent: #514AF6;
+  --dark-background: #0A0A0A;
+  --light-text: #F8F9FA;
+  --card-background: #161616;
+  --progress-track: #2D2D2D;
+}
+
+/* Main Container */
+.profile-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Left Column */
+.profile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+/* Profile Image */
+.profile-image__wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 380px; /* Reduced from 600px */
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1; /* Maintain square ratio */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05); /* Slightly reduced hover effect */
+}
+/* Achievements Grid */
+.achievements-grid {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.achievement-card {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+}
+
+.achievement-value {
+  color: var(--primary-accent);
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.achievement-label {
+  color: #858585;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Right Column Content */
+.profile-content {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.profile-header {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.professional-tag {
+  /* color: var(--primary-accent); */
+  color:  #ffb524;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+  background: linear-gradient(to right, #fff 65%, var(--primary-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.profile-description {
+  color: #A3A3A3;
+  line-height: 1.7;
+  max-width: 48ch;
+}
+
+/* CTA Button */
+.cta-button {
+  justify-self: start;
+  background: var(--primary-accent);
+  color: var(--light-text);
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  /* transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(81, 74, 246, 0.3); */
+  background: #4139f4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px -3px rgba(81, 74, 246, 0.4);
+
+}
+
+/* Skills Section */
+.expertise {
+  display: grid;
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #262626;
+}
+
+.expertise__item {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.expertise__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.925rem;
+  color: #ccc;
+}
+
+.expertise__progress {
+  height: 6px;
+  background: var(--progress-track);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.expertise__progress-bar {
+  height: 100%;
+  background: var(--primary-accent);
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  /* Change order for mobile */
+  .profile-content {
+    order: -1; /* Content comes first */
+  }
+
+  .profile-column {
+    order: 0; /* Image and achievements follow */
+    gap: 2rem;
+  }
+
+  .profile-image__wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .profile-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .professional-tag,
+  .profile-description {
+    text-align: center;
+    justify-self: center;
+    
+  }
+
+  .cta-button {
+    justify-self: center;
+  }
+.achievements-grid{
+  padding: 20px 5px 5px;
+}
+.achievement-value{
+  font-size: 2.5rem;
+}
+
+.expertise{
+  padding: 12px;
+}
+
+}
+
+
+
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGNEDBYHUFSA</title>
+    <link rel="stylesheet" href="../mainpagecss/navhero.css">
+    <link rel="stylesheet" href="gdservice.css">
+    <link rel="stylesheet" href="../mainpagecss/footer.css">
+    <script src="gdservice.html"></script>
+</head>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <script>
+      // Fetch the navbar HTML and inject it into the page
+      fetch("../nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+          // Call the function to setup event listeners for the hamburger menu
+          setupNavbar();
+        });
+
+      // Function to setup event listeners for the hamburger and dropdowns
+      function setupNavbar() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+          });
+        }
+
+        dropdowns.forEach(dropdown => {
+          const toggle = dropdown.querySelector('.dropdown-toggle');
+          if (toggle) {
+            toggle.addEventListener('click', function (e) {
+              e.preventDefault();
+              dropdown.classList.toggle('active');
+            });
+          }
+        });
+      }
+    </script>
+   <div class="container">
+    <section class="hero">
+        <h1>Transform Your Brand Identity</h1>
+        <p>Comprehensive design solutions that elevate your brand presence across all platforms and mediums.</p>
+    </section>
+
+    <div class="services-grid">
+        <!-- Service Cards -->
+        <div class="service-card">
+            <h3>Brand Identity Design</h3>
+            <p>Crafting unique brand personalities through strategic visual development and style guidelines.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Logo & Visual Systems</h3>
+            <p>Memorable logos supported by comprehensive visual language systems for brand consistency.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Social Media Design</h3>
+            <p>Engaging social content that boosts interaction and strengthens online presence.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Marketing Collateral</h3>
+            <p>Print and digital assets that communicate your message effectively and professionally.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Packaging & Labels</h3>
+            <p>Shelf-stopping designs that tell your product's story and drive consumer engagement.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Typography & Layout</h3>
+            <p>Expert typesetting and composition that enhances readability and visual hierarchy.</p>
+        </div>
+
+        <!-- <div class="service-card">
+            <h3>Adobe Creative Suite</h3>
+            <p>Professional execution using industry-standard tools for pixel-perfect results.</p>
+        </div> -->
+    </div>
+
+    <div class="cta-section">
+        <button class="cta-button" onclick="window.location.href='../contactus/contactus.html'">
+            <span>Start Your Project</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
+</div>
+        </section>
+        <footer class="site-footer">
+            <p class="footer-text">
+              © 2025 All rights reserved. <span class="designer">DESIGNEDBYHUFSA</span>
+            </p>
+          </footer>
+
+<!--       
+        <div class="portfolio-grid" id="portfolioGrid">
+           
+            <div class="portfolio-card">
+                <img src="public/Cyber Sphere  LOGO.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>The process begins with a deep understanding of the brand’s vision, objectives, and target audience. Through detailed discussions and research, a personalized strategy is crafted that aligns with the goals, ensuring a successful foundation for both design and development.</p>
+            </div>
+            <div class="portfolio-card">
+                <img src="public/Desktop - 16.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>Project description and details</p>
+            </div>
+            <div class="portfolio-card">
+                <img src="public/social media posts cyber sphere-01.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>Project description and details</p>
+            </div>
+      
+            <div class="portfolio-card hidden">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>Project description and details</p>
+
+            </div>
+            <div class="portfolio-card hidden">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>Project description and details</p>
+            </div>
+            <div class="portfolio-card hidden">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>Project description and details</p>
+            </div>
+        </div>
+
+        <button class="cta-button" id="loadMore">Load More Projects</button>
+    </div> -->
+
+  
+</body>
+</html>
